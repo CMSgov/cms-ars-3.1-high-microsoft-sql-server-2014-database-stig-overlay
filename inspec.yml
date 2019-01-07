@@ -1,7 +1,7 @@
 name: MS SQL Server 2014 Database Security Technical Implementation Guide
 title: MS SQL Server 2014 Database Security Technical Implementation Guide
 maintainer: The CMS InSpec Dev Team
-copyright: (c) 2018 The MITRE Corporations
+copyright: (c) 2018 The MITRE Corporation
 copyright_email: inspec@mitre.org
 license: Apache-2.0
 summary: CMS ARS 3.1 overlay for MS SQL	Server 2014 DISA STIG.
