@@ -1,5 +1,5 @@
 # encoding: utf-8
-include_controls 'microsoft-sql-2014-database-stig-baseline' do
+include_controls 'microsoft-sql-server-2014-database-stig-baseline' do
   control 'V-67357' do
     desc 'Authentication with a CMS-approved PKI certificate does not necessarily 
          imply authorization to access the database and all its contents.  To 
