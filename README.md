@@ -13,16 +13,16 @@ The following attributes must be configured in an attributes file for the profil
 
 ```
 # Username for MSSQL DB Server
-user: Null
+user: null
 
 # Password for MSSQL DB Server
-passwored: Null
+passwored: null
 
 # Hostname of MSSQL DB Server
-host: Null
+host: null
 
 # Instance name of MSSQL DB Server
-instance: Null
+instance: null
 
 # Port number of MSSQL DB Server
 port: 49789
@@ -32,28 +32,30 @@ db_name: 'master'
 ```
 
 ## Running This Overlay
-When the __"runner"__ host uses this profile overlay for the first time, follow these instructions: 
+When the __"runner"__ host uses this profile overlay for the first time, follow these steps: 
 
 ```
 mkdir profiles
 cd profiles
 git clone https://github.cms.gov/ispg-dev/cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay.git
-git clone https://github.com/mitre/microsoft-sql-server-2014-database-stig-baseline.git
+git clone https://github.com/mitre/cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay.git
 cd cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay
 bundle install
-inspec exec ../cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay -t winrm://$winhostip --user 'Administrator' --password=Pa55w0rd --reporter cli json:mssql-database-overlay-results.json --attrs=<path-to-your-attributes-file/your_attributes_filename.yml>
+cd ..
+inspec exec cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay --target=winrm://<your_target_host_name_or_ip_address> --user=<target_account_with_administrative_privileges> --password=<password_for_target_account> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json> 
 ```
 
-For every successive run, follow these instructions to always have the latest version:
+For every successive run, follow these steps to always have the latest version of this overlay and dependent profiles:
 
 ```
 cd profiles/cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay
 git pull
-cd ../microsoft-sql-server-2014-database-stig-baseline
+cd ../microsoft-windows-2012r2-memberserver-stig-baseline
 git pull
 cd ../cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay
 bundle install
-inspec exec ../cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay -t winrm://$winhostip --user 'Administrator' --password=Pa55w0rd --reporter cli json:mssql-database-overlay-results.json --attrs=<path-to-your-attributes-file/your_attributes_filename.yml>
+cd ..
+inspec exec cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay --target=winrm://<your_target_host_name_or_ip_address> --user=<target_account_with_administrative_privileges> --password=<password_for_target_account> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json> 
 ```
 
 ## Viewing the JSON Results
