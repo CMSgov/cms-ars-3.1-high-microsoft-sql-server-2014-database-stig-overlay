@@ -9,6 +9,28 @@ __For the best security of the runner, always install on the runner the _latest 
 
 Latest versions and installation options are available at the [InSpec](http://inspec.io/) site.
 
+The following attributes must be configured in an attributes file for the profile to run correctly. More information about InSpec attributes can be found in the [InSpec Profile Documentation](https://www.inspec.io/docs/reference/profiles/).
+
+```
+# Username for MSSQL DB Server
+user: Null
+
+# Password for MSSQL DB Server
+passwored: Null
+
+# Hostname of MSSQL DB Server
+host: Null
+
+# Instance name of MSSQL DB Server
+instance: Null
+
+# Port number of MSSQL DB Server
+port: 49789
+
+# Name of the specific database being evaluated within the MSSQL DB Server
+db_name: 'master'
+```
+
 ## Running This Overlay
 When the __"runner"__ host uses this profile overlay for the first time, follow these instructions: 
 
@@ -19,7 +41,7 @@ git clone https://github.cms.gov/ispg-dev/cms-ars-3.1-high-microsoft-sql-server-
 git clone https://github.com/mitre/microsoft-sql-server-2014-database-stig-baseline.git
 cd cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay
 bundle install
-inspec exec ../cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay -t winrm://$winhostip --user 'Administrator' --password=Pa55w0rd --reporter cli json:mssql-database-overlay-results.json
+inspec exec ../cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay -t winrm://$winhostip --user 'Administrator' --password=Pa55w0rd --reporter cli json:mssql-database-overlay-results.json --attrs=<path-to-your-attributes-file/your_attributes_filename.yml>
 ```
 
 For every successive run, follow these instructions to always have the latest version:
@@ -31,7 +53,7 @@ cd ../microsoft-sql-server-2014-database-stig-baseline
 git pull
 cd ../cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay
 bundle install
-inspec exec ../cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay -t winrm://$winhostip --user 'Administrator' --password=Pa55w0rd --reporter cli json:mssql-database-overlay-results.json
+inspec exec ../cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay -t winrm://$winhostip --user 'Administrator' --password=Pa55w0rd --reporter cli json:mssql-database-overlay-results.json --attrs=<path-to-your-attributes-file/your_attributes_filename.yml>
 ```
 
 ## Viewing the JSON Results
