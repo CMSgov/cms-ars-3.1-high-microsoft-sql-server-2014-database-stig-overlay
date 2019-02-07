@@ -1,0 +1,47 @@
+#description: 'Changes in categorized information must be tracked. Without an audit trail, unauthorized access to protected data could go undetected. Review the system documentation to determine whether it is required to track categories of information, such as classification or sensitivity level. If it is not, such controls is not applicable (NA).'
+#type: boolean
+server_trace_or_audit_required: true
+
+#description: 'Set to true If SQL Server Trace is in use for audit purposes'
+#type: boolean
+server_trace_implemented: true
+
+#description: 'Set to true If SQL Server Audit is in use for audit purposes'
+#type: boolean
+server_audit_implemented: true
+
+#description: 'Specify if  SQL Server Audit is not in use at the database level'
+#type: boolean
+server_audit_at_database_level_required: true
+
+#description: 'User with `ALTER ANY DATABASE AUDIT` or `CONTROL` permission'
+#type: array
+approved_audit_maintainers: []
+
+#description: 'name of the timed job that automatically checks all system and user-defined procedures for being modified'
+#type: string
+track_stored_procedures_changes_job_name: 'STIG_database_object_tracking'
+
+#description: 'name of the timed job that automatically checks all system and user-defined triggers for being modified'
+#type: string
+track_triggers_changes_job_name: 'STIG_database_object_tracking'
+
+#description: 'name of the timed job that automatically checks all system and user-defined functions for being modified'
+#type: string
+track_functions_changes_job_name : 'STIG_database_object_tracking'
+
+#description: 'identify SQL Server accounts authorized to own database objects'
+#type: array
+authorized_principals: []
+
+#description: 'Set to true if data at rest encryption is required'
+#type: boolean
+data_at_rest_encryption_required: true
+
+#description: 'Set to true if full disk encryption is in place'
+#type: boolean
+full_disk_encryption_inplace: false
+
+# description: 'Set to true if security labeling is required'
+# type: boolean
+security_labeling_required: true
