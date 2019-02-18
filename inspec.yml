@@ -1,16 +1,15 @@
-name: MS SQL Server 2014 Database Security Technical Implementation Guide
-title: MS SQL Server 2014 Database Security Technical Implementation Guide
-maintainer: The CMS InSpec Dev Team
-copyright: (c) 2018 The MITRE Corporation
-copyright_email: inspec@mitre.org
+name: cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay
+title: 
+maintainer: CMS InSpec Dev Team
+copyright: 
+copyright_email:
 license: Apache-2.0
-summary: CMS ARS 3.1 overlay for MS SQL	Server 2014 DISA STIG.
+summary: 
 version: 0.1.0
 
 depends:
 - name: microsoft-sql-server-2014-database-stig-baseline
-  git: https://github.com/mitre/stig-microsoft-sql-server-2014-database-baseline.git
-  branch: master
+  path: ../microsoft-sql-server-2014-database-stig-baseline
 
 attributes:
   - name: user
