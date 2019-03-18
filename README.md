@@ -16,7 +16,7 @@ The following attributes must be configured in an attributes file for the profil
 user: null
 
 # Password for MSSQL DB Server
-passwored: null
+password: null
 
 # Hostname of MSSQL DB Server
 host: null
