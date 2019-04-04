@@ -29,6 +29,42 @@ port: 49789
 
 # Name of the specific database being evaluated within the MSSQL DB Server
 db_name: 'master'
+
+# description: 'Set to true If SQL Server Trace or Server Audit is required for audit purposes'
+server_trace_or_audit_required: true
+
+# description: 'Set to true If SQL Server Trace is in use for audit purposes'
+server_trace_implemented: true
+
+# description: 'Set to true If SQL Server Audit is in use for audit purposes'
+server_audit_implemented: true
+
+# description: 'Specify if  SQL Server Audit is not in use at the database level'
+server_audit_at_database_level_required: true
+
+# description: 'User with `ALTER ANY DATABASE AUDIT` or `CONTROL` permission'
+approved_audit_maintainers: []
+
+# description: 'name of the timed job that automatically checks all system and user-defined procedures for being modified'
+track_stored_procedures_changes_job_name: ''
+
+# description: 'name of the timed job that automatically checks all system and user-defined triggers for being modified'
+track_triggers_changes_job_name: ''
+
+# description: 'name of the timed job that automatically checks all system and user-defined functions for being modified'
+track_functions_changes_job_name: 'STIG_database_object_tracking'
+
+# description: 'identify SQL Server accounts authorized to own database objects'
+authorized_principals: []
+
+# description: 'Set to true if data at rest encryption is required'
+data_at_rest_encryption_required: true
+
+# description: 'Set to true if full disk encryption is in place'
+full_disk_encryption_inplace: false
+
+# description: 'Set to true if security labeling is required'
+security_labeling_required: true
 ```
 
 ## Running This Overlay
