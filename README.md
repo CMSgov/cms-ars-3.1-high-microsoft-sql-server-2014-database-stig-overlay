@@ -52,7 +52,7 @@ track_stored_procedures_changes_job_name: ''
 track_triggers_changes_job_name: ''
 
 # description: 'name of the timed job that automatically checks all system and user-defined functions for being modified'
-track_functions_changes_job_name: 'STIG_database_object_tracking'
+track_functions_changes_job_name: ''
 
 # description: 'identify SQL Server accounts authorized to own database objects'
 authorized_principals: []
