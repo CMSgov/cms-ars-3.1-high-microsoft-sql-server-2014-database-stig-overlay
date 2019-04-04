@@ -9,7 +9,7 @@ version: 0.1.0
 
 depends:
 - name: microsoft-sql-server-2014-database-stig-baseline
-  path: microsoft-sql-server-2014-database-stig-baseline
+  path: ../microsoft-sql-server-2014-database-stig-baseline
 
 attributes:
   - name: user
