@@ -13,13 +13,13 @@ The following attributes must be configured in an attributes file for the profil
 
 ```
 # Description: Username for MSSQL DB Server (e.g., null)
-user: null
+user: 
 
 # Description: Password for MSSQL DB Server (e.g., null)
-password: null
+password: 
 
 # Description: Hostname of MSSQL DB Server (e.g., null)
-host: null
+host: 
 
 # Description: Instance name of MSSQL DB Server (e.g., null)
 instance: 
