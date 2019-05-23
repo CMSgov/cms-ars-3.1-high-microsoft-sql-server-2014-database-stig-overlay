@@ -12,59 +12,59 @@ Latest versions and installation options are available at the [InSpec](http://in
 The following attributes must be configured in an attributes file for the profile to run correctly. More information about InSpec attributes can be found in the [InSpec Profile Documentation](https://www.inspec.io/docs/reference/profiles/).
 
 ```
-# Username for MSSQL DB Server
+# Description: Username for MSSQL DB Server (e.g., null)
 user: null
 
-# Password for MSSQL DB Server
+# Description: Password for MSSQL DB Server (e.g., null)
 password: null
 
-# Hostname of MSSQL DB Server
+# Description: Hostname of MSSQL DB Server (e.g., null)
 host: null
 
-# Instance name of MSSQL DB Server
-instance: null
+# Description: Instance name of MSSQL DB Server (e.g., null)
+instance: 
 
-# Port number of MSSQL DB Server
-port: 49789
+# Description: Port number of MSSQL DB Server (e.g., 49789)
+port: 
 
-# Name of the specific database being evaluated within the MSSQL DB Server
-db_name: 'master'
+# Description: Name of the specific database being evaluated within the MSSQL DB Server (e.g., 'master')
+db_name: ''
 
-# description: 'Set to true If SQL Server Trace or Server Audit is required for audit purposes'
-server_trace_or_audit_required: true
+# Description: Set to true If SQL Server Trace or Server Audit is required for audit purposes
+server_trace_or_audit_required: false
 
-# description: 'Set to true If SQL Server Trace is in use for audit purposes'
-server_trace_implemented: true
+# Description: Set to true If SQL Server Trace is in use for audit purposes
+server_trace_implemented: false
 
-# description: 'Set to true If SQL Server Audit is in use for audit purposes'
-server_audit_implemented: true
+# Description: Set to true If SQL Server Audit is in use for audit purposes
+server_audit_implemented: false
 
-# description: 'Specify if  SQL Server Audit is not in use at the database level'
-server_audit_at_database_level_required: true
+# Description: Specify if  SQL Server Audit is not in use at the database level
+server_audit_at_database_level_required: false
 
-# description: 'User with `ALTER ANY DATABASE AUDIT` or `CONTROL` permission'
+# Description: User with `ALTER ANY DATABASE AUDIT` or `CONTROL` permission
 approved_audit_maintainers: []
 
-# description: 'name of the timed job that automatically checks all system and user-defined procedures for being modified'
+# Description: Name of the timed job that automatically checks all system and user-defined procedures for being modified
 track_stored_procedures_changes_job_name: ''
 
-# description: 'name of the timed job that automatically checks all system and user-defined triggers for being modified'
+# Description: Name of the timed job that automatically checks all system and user-defined triggers for being modified
 track_triggers_changes_job_name: ''
 
-# description: 'name of the timed job that automatically checks all system and user-defined functions for being modified'
+# Description: Name of the timed job that automatically checks all system and user-defined functions for being modified
 track_functions_changes_job_name: ''
 
-# description: 'identify SQL Server accounts authorized to own database objects'
+# Description: Identify SQL Server accounts authorized to own database objects
 authorized_principals: []
 
-# description: 'Set to true if data at rest encryption is required'
-data_at_rest_encryption_required: true
+# Description: Set to true if data at rest encryption is required
+data_at_rest_encryption_required: false
 
-# description: 'Set to true if full disk encryption is in place'
+# Description: Set to true if full disk encryption is in place
 full_disk_encryption_inplace: false
 
-# description: 'Set to true if security labeling is required'
-security_labeling_required: true
+# Description: Set to true if security labeling is required
+security_labeling_required: false
 ```
 
 ## Running This Overlay
