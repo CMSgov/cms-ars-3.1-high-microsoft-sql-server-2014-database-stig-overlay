@@ -39,7 +39,7 @@ server_trace_implemented: false
 # Description: Set to true if SQL Server Audit is in use for audit purposes
 server_audit_implemented: false
 
-# Description: Specify if  SQL Server Audit is not in use at the database level
+# Description: Specify if SQL Server Audit is not in use at the database level
 server_audit_at_database_level_required: false
 
 # Description: User with `ALTER ANY DATABASE AUDIT` or `CONTROL` permission
