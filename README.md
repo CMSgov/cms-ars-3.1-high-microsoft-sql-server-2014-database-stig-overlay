@@ -30,13 +30,13 @@ port:
 # Description: Name of the specific database being evaluated within the MSSQL DB Server (e.g., 'master')
 db_name: ''
 
-# Description: Set to true If SQL Server Trace or Server Audit is required for audit purposes
+# Description: Set to true if SQL Server Trace or Server Audit is required for audit purposes
 server_trace_or_audit_required: false
 
-# Description: Set to true If SQL Server Trace is in use for audit purposes
+# Description: Set to true if SQL Server Trace is in use for audit purposes
 server_trace_implemented: false
 
-# Description: Set to true If SQL Server Audit is in use for audit purposes
+# Description: Set to true if SQL Server Audit is in use for audit purposes
 server_audit_implemented: false
 
 # Description: Specify if  SQL Server Audit is not in use at the database level
