@@ -34,9 +34,9 @@ attributes:
     default: 49789
 
   - name: db_name
-    description: 'name of the specific DB being evaluated within the MSSQL server'
+    description: 'name of the specific DB being evaluated within the MSSQL server (e.g., ''master'')'
     type: string
-    default: 'master'
+    default: ''
 
   - name: server_trace_or_audit_required
     description: 'Changes in categorized information must be tracked. Without an 
@@ -45,22 +45,22 @@ attributes:
     categories of information, such as classification or sensitivity level.  
     If it is not, such controls is not applicable (NA).'
     type: boolean
-    default: true
+    default: false
 
   - name: server_trace_implemented
     description: 'Set to true If SQL Server Trace is in use for audit purposes'
     type: boolean
-    default: true
+    default: false
 
   - name: server_audit_implemented
     description: 'Set to true If SQL Server Audit is in use for audit purposes'
     type: boolean
-    default: true
+    default: false
 
   - name: server_audit_at_database_level_required
     description: 'Specify if  SQL Server Audit is not in use at the database level'
     type: boolean
-    default: true
+    default: false
 
   - name: approved_audit_maintainers
     description: 'User with `ALTER ANY DATABASE AUDIT` or `CONTROL` permission'
@@ -69,21 +69,21 @@ attributes:
 
   - name: track_stored_procedures_changes_job_name
     description: 'name of the timed job that automatically checks all system and 
-    user-defined procedures for being modified'
+    user-defined procedures for being modified (e.g., ''STIG_database_object_tracking'')'
     type: string
-    default: 'STIG_database_object_tracking'
+    default: ''
 
   - name: track_triggers_changes_job_name
     description: 'name of the timed job that automatically checks all system and 
-    user-defined triggers for being modified'
+    user-defined triggers for being modified (''STIG_database_object_tracking'')'
     type: string
-    default: 'STIG_database_object_tracking'
+    default: ''
 
   - name: track_functions_changes_job_name 
     description: 'name of the timed job that automatically checks all system and 
-    user-defined functions for being modified'
+    user-defined functions for being modified (''STIG_database_object_tracking'')'
     type: string
-    default: 'STIG_database_object_tracking'
+    default: ''
 
   - name: authorized_principals
     description: 'identify SQL Server accounts authorized to own database objects'
@@ -93,7 +93,7 @@ attributes:
   - name: data_at_rest_encryption_required
     description: 'Set to true if data at rest encryption is required'
     type: boolean
-    default: true
+    default: false
 
   - name: full_disk_encryption_inplace
     description: 'Set to true if full disk encryption is in place'
@@ -103,4 +103,4 @@ attributes:
   - name: security_labeling_required
     description: 'Set to true if security labeling is required'
     type: boolean
-    default: true
+    default: false
