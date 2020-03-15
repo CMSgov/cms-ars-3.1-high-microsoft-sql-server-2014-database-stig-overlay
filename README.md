@@ -75,7 +75,7 @@ When the __"runner"__ host uses this profile overlay for the first time, follow 
 ```
 mkdir profiles
 cd profiles
-git clone https://github.cms.gov/ispg/cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay.git
+git clone https://github.cms.gov/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay.git
 git clone https://github.com/mitre/microsoft-sql-server-2014-database-stig-baseline.git
 cd cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay
 bundle install
@@ -109,7 +109,7 @@ The JSON InSpec results file may also be loaded into a __[full heimdall server](
 * Rony Xavier
 
 ## Getting Help
-To report a bug or feature request, please open an [issue](https://github.cms.gov/ispg/cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay/issues/new).
+To report a bug or feature request, please open an [issue](https://github.cms.gov/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2014-database-stig-overlay/issues/new).
 
 ## License
 This is licensed under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) license. 
