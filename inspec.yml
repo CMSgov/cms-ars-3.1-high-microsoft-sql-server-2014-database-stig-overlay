@@ -4,7 +4,7 @@ maintainer: CMS InSpec Dev Team
 copyright: 
 copyright_email:
 license: Apache-2.0
-summary: "CMS ARS 3.1 Moderate Overlay InSpec Validation Profile for Microsoft SQL Server 2014 Database STIG"
+summary: "CMS ARS 3.1 High Overlay InSpec Validation Profile for Microsoft SQL Server 2014 Database STIG"
 version: 0.1.1
 inspec_version: ">= 4.0"
 
